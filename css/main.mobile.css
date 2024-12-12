@@ -1,0 +1,207 @@
+@media screen and (max-width:590px) {
+  main .section-title {
+    font-size: 25px;
+    padding: 30px;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  .header-text p {
+    font-size: 14px;
+  }
+
+  .left-part,
+  .right-part {
+    flex-basis: 100%;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ffffff33;
+  }
+
+  nav {
+    border: none;
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    align-items: center;
+  }
+
+  .nav-link {
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+
+  }
+
+  #navUl {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    display: none;
+    /* Hidden by default */
+  }
+
+  #navUl.show {
+    display: flex;
+    /* Show navigation links when toggle is clicked */
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navToggle {
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+
+
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .logos-container {
+    gap: 2rem;
+  }
+
+  .skills-item {
+    width: 30px;
+    height: 48px;
+  }
+
+  #About,
+  .projects-grid {
+    margin: 10px;
+
+  }
+
+  .avatar {
+    display: grid;
+    align-items: center;
+  }
+
+  .container {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .button-and-social-icons .button {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .button-and-social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .project-card .project-title {
+    font-size: 18px;
+  }
+
+  .project-card .project-description {
+    font-size: 16px;
+  }
+
+  .services {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .service {
+    width: 90%;
+  }
+
+  /* ----- education --------- */
+  .education-content {
+    left: -50px;
+  }
+
+  .education-timeline::after {
+    left: -25px;
+  }
+
+  .education-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .education-item::before {
+    left: 10px;
+    border: medium solid var(--border-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--border-color) transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: -36px;
+  }
+
+  .left {
+    left: 0px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  /* ------ contact ---- */
+
+  .contact-container .content {
+    text-align: center;
+  }
+
+
+  #Contact {
+    scroll-margin-top: 200px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (min-width:590px) {
+  .logo svg {
+    display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
