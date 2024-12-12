@@ -35,12 +35,14 @@ html {
   --primary-color: #ffffff;
   --secondary-color: #f39c12;
   --border-color: #9b9b9b6e;
-  --soft-white: #b6b6b6;
+  --soft-white: #ececec;
+  --card-bg:#30303093;
 }
 
 body {
   background-color: var(--primary-bg);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
 }
 
 main .section-title {
@@ -64,7 +66,6 @@ main .section-title {
   width: 40px;
   border-radius: 50%;
   object-fit: cover;
-  padding: 0 10px;
 }
 
 .header {
@@ -122,7 +123,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(3, 148, 10, 0.075);
+  background: rgba(1, 78, 5, 0.075);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   padding-bottom: 50px;
@@ -236,8 +237,6 @@ main {
   place-items: center;
   list-style-type: none;
   overflow: hidden;
-
-  /* Apply mask gradient effect */
   mask-composite: exclude;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
@@ -263,7 +262,7 @@ main {
   -ms-overflow-style: none;
 }
 
-.skills-container::-webkit-scrollbar {
+::-webkit-scrollbar{
   display: none;
 }
 
@@ -315,25 +314,7 @@ main {
 }
 
 
-.blur-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 200px;
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 1000;
-}
 
-.blur-left {
-  left: 0;
-  background: linear-gradient(to right, rgba(3, 148, 10, 0.075), transparent);
-}
-
-.blur-right {
-  right: 0;
-  background: linear-gradient(to left, rgba(3, 148, 10, 0.075), transparent);
-}
 
 
 /* -------- about ------ */
@@ -342,7 +323,7 @@ main {
 }
 
 .container {
-  background-color: rgba(56, 56, 56, 0.473);
+  background-color: var(--card-bg);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   border-radius: var(--radius);
@@ -540,8 +521,8 @@ main {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid var(--border-color);
-  border-color: transparent transparent transparent rgba(56, 56, 56, 0.699);
+  border: medium solid var(--card-bg);
+  border-color: transparent transparent transparent var(--card-bg);
   border-width: 10px 0 10px 10px;
 
 }
@@ -554,9 +535,9 @@ main {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid var(--border-color);
+  border: medium solid var(--card-bg);
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(56, 56, 56, 0.699) transparent transparent;
+  border-color: transparent var(--card-bg) transparent transparent;
 }
 
 .right::after {
@@ -565,7 +546,7 @@ main {
 
 .education-content {
   padding: 20px 30px;
-  background-color: rgba(56, 56, 56, 0.473);
+  background-color: var(--card-bg);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   position: relative;
@@ -620,7 +601,7 @@ main {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(92, 92, 92, 0.404);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: var(--radius);
@@ -655,13 +636,7 @@ main {
   margin-bottom: 50px;
 }
 
-.project-card a {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  -webkit-user-select: none;
-  user-select: none;
-}
+
 
 .project-link:hover {
   background: rgba(255, 255, 255, 0.3);
@@ -717,6 +692,8 @@ main {
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #6e6e6d75;
+
 }
 
 .color-glassy {
@@ -757,13 +734,13 @@ main {
 .card-title {
   font-size: 18px;
   font-weight: 500;
-  color: #ddd;
+  color: var(--primary-color);
   margin: 0;
 }
 
 .card-description {
   font-size: 14px;
-  color: #999;
+  color: #f1f1f1;
   margin-bottom: 24px;
 }
 
@@ -778,7 +755,7 @@ main {
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  color: #999;
+  color: #f0ffed;
   font-size: 14px;
   position: relative;
   padding-left: 20px;

@@ -1,3 +1,18 @@
+@media screen and (max-width:390px) {
+  .education-content{
+    left: -10px;
+  }
+  .education-item{
+    width: 80%;
+  }
+  .education-content{
+    padding: 20px;
+  }
+}
+
+
+
+
 @media screen and (max-width:590px) {
   main .section-title {
     font-size: 25px;
@@ -28,10 +43,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 85%;
     padding: 10px 20px;
-    border-bottom: 1px solid #ffffff33;
-  }
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Shadow effect */}
 
   nav {
     border: none;
@@ -134,6 +149,11 @@
   .project-card .project-description {
     font-size: 16px;
   }
+  .project-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .services {
     flex-direction: column;
@@ -165,18 +185,25 @@
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--border-color) transparent transparent;
   }
+  .education-title{
+    font-size: 18px;
+  }
+  .education-institution{
+    font-size: 16px;
+  }
 
   .left::after,
   .right::after {
-    left: -36px;
+    left: -16px;
+    top: 20px;
   }
 
   .left {
-    left: 0px;
+    left: -20px;
   }
 
   .right {
-    left: 0%;
+    left: -20px;
   }
 
   /* ------ contact ---- */
@@ -203,5 +230,31 @@
 
   .contact-container {
     grid-template-columns: 1fr 1fr;
+  }
+  .blur-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .blur-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(3, 148, 10, 0.075), transparent);
+  }
+  
+  .blur-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(3, 148, 10, 0.075), transparent);
+  }
+  .project-card a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
