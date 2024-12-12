@@ -76,7 +76,6 @@ main .section-title {
 
 nav {
   display: flex;
-  padding: 1px 10px;
   align-items: center;
   -webkit-backdrop-filter: blur(17px);
   backdrop-filter: blur(17px);
@@ -85,33 +84,37 @@ nav {
   position: fixed;
   top: 20px;
   z-index: 1;
+  padding: 5px 20px;  
 }
 
-nav ul li {
+#navUl li {
   display: inline-block;
-  margin: 10px 7px;
-
 }
-
+.nav-link{
+  padding: 0 20px;
+}
 nav #navUl li a {
-  color: var(--primary-text-color);
-  padding: 5px 7px;
+  color: var(--primary-color);
+  padding: 5px 10px; /* Consistent padding */
   position: relative;
   display: inline-block;
-  color: var(--primary-color);
+  text-decoration: none;
+  border: 1px solid transparent; /* Transparent border to maintain size */
   border-radius: var(--radius, 5px);
-  overflow: hidden;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-sizing: border-box; /* Ensures border is part of element dimensions */
 }
 
-
 nav #navUl li a:hover {
-  border: 1px solid var(--border-color);
+  background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.1));
+  color: var(--hover-text-color, #fff);
+  border: 1px solid var(--border-color); /* Border appears without shifting */
 }
 
 
 #navUl a.active {
   border: 1px solid var(--border-color);
+  padding: 5px 6px;
 }
 
 
@@ -234,14 +237,22 @@ main {
   margin: 0 auto;
   padding: 10px 1rem;
   display: flex;
-  place-items: center;
+  align-items: center;
+  justify-content: space-between; 
+  overflow-x: auto; 
   list-style-type: none;
-  overflow: hidden;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
   mask-composite: exclude;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   opacity: 1;
 }
+
+.skills-container::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 .skills-title {
@@ -604,8 +615,8 @@ main {
   background: rgba(92, 92, 92, 0.404);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-radius: var(--radius);
-  padding: 10px;
+  border-radius: 14px;
+  padding: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
@@ -619,7 +630,7 @@ main {
 .project-image {
   width: 100%;
   height: 250px;
-  border-radius: var(--radius);
+  border-radius: 8px;
   margin-bottom: 20px;
   object-fit: cover;
 }
@@ -634,6 +645,11 @@ main {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 
@@ -763,13 +779,23 @@ main {
 
 .card-list-item::before {
   content: '✔';
-  color: #4CAF50;
+  color: #4CAF50; 
   font-size: 16px;
   position: absolute;
   left: 0;
   top: 0;
   line-height: 1;
+  text-decoration: none;
 }
+
+/* Explicitly target states like hover, active, and visited */
+.card-list-item:hover::before,
+.card-list-item:active::before,
+.card-list-item:visited::before {
+  color: #4CAF50; 
+  text-decoration: none;
+}
+
 
 
 .card-button {
@@ -837,13 +863,13 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #ffc107;
+  border-color: var(--secondary-color);
 }
 
 button {
   width: 100%;
   padding: 1rem;
-  background-color: #ffc107;
+  background-color: var(--secondary-color);
   color: #000;
   border: none;
   border-radius: 4px;
@@ -854,7 +880,7 @@ button {
 }
 
 button:hover {
-  background-color: #ffcd38;
+  background-color: #ac6f0e;
 }
 
 .hidden {
@@ -893,7 +919,7 @@ button:hover {
 }
 
 .footer-section h3 {
-  color: #ffc107;
+  color: var(--secondary-color);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -933,7 +959,7 @@ button:hover {
 }
 
 .social-icon:hover {
-  background-color: #ffc107;
+  background-color: #33333328;
 }
 
 .social-icon svg {

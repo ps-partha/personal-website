@@ -11,8 +11,6 @@
 }
 
 
-
-
 @media screen and (max-width:590px) {
   main .section-title {
     font-size: 25px;
@@ -46,7 +44,9 @@
     width: 85%;
     padding: 10px 20px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Shadow effect */}
+    
+  
+  }
 
   nav {
     border: none;
@@ -56,6 +56,7 @@
     width: 100%;
     top: 0;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Shadow effect */
   }
 
   .nav-link {
@@ -71,12 +72,13 @@
     align-items: center;
     text-align: center;
     display: none;
-    /* Hidden by default */
+  }
+  #navUl li a{
+    margin: 10px;
   }
 
   #navUl.show {
     display: flex;
-    /* Show navigation links when toggle is clicked */
     height: 100vh;
     flex-direction: column;
     align-items: center;
@@ -166,7 +168,8 @@
 
   /* ----- education --------- */
   .education-content {
-    left: -50px;
+    left: -45px;
+    min-width: 270px;
   }
 
   .education-timeline::after {
@@ -180,7 +183,7 @@
   }
 
   .education-item::before {
-    left: 10px;
+    left: 15px;
     border: medium solid var(--border-color);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--border-color) transparent transparent;
