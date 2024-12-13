@@ -168,8 +168,7 @@
 
   /* ----- education --------- */
   .education-content {
-    left: -45px;
-    min-width: 270px;
+    left: -35px;
   }
 
   .education-timeline::after {
@@ -183,7 +182,7 @@
   }
 
   .education-item::before {
-    left: 15px;
+    left: 25px;
     border: medium solid var(--border-color);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--border-color) transparent transparent;

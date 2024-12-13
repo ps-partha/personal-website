@@ -22,7 +22,7 @@
     </div>
     <nav>
       <div class="logo">
-        <img src="images/partha-sarker.jpg" alt="" />
+        <img src="./images/logo.png" alt="" />
         <svg id="navToggle" width="24" height="24" viewBox="0 0 448 384" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0 32C0 14.3 14.3 0 32 0H416C433.7 0 448 14.3 448 32C448 49.7 433.7 64 416 64H32C14.3 64 0 49.7 0 32ZM0 192C0 174.3 14.3 160 32 160H416C433.7 160 448 174.3 448 192C448 209.7 433.7 224 416 224H32C14.3 224 0 209.7 0 192ZM448 352C448 369.7 433.7 384 416 384H32C14.3 384 0 369.7 0 352C0 334.3 14.3 320 32 320H416C433.7 320 448 334.3 448 352Z"
@@ -31,7 +31,7 @@
       </div>
       <div class="nav-link">
         <ul id="navUl">
-          <li><a href="#Home">Home</a></li>
+          <li><a class="active" href="#Home">Home</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Education">Education</a></li>
           <li><a href="#Projects">Projects</a></li>
@@ -216,10 +216,10 @@
             I am a dedicated programmer with a strong passion for learning and exploring new technologies. My enthusiasm
             drives me to approach every task with focus and determination. I enjoy solving problems creatively and
             continuously improving my skills, making me a reliable and motivated individual ready to tackle challenges
-            and achieve excellence..
+            and achieve excellence.
           </p>
           <div class="button-and-social-icons">
-            <a href="#" class="button">
+            <a href="https://drive.google.com/file/d/1attSVXV99Xsl7SXpz4kE-YXcgDvdhPtS/view?usp=sharing" class="button" target="_blank" rel="noopener">
               Download CV
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -303,8 +303,7 @@
             <div class="education-date">2021 - 2025</div>
             <div class="education-title">Bachelor of Science in Computer Science</div>
             <div class="education-institution"><a href="https://diu.ac/">Dhaka International University: DIU</a></div>
-            <p class="education-description">Dhaka International University is a private university in Dhaka,
-              Bangladesh. The university was established on 7 April 1995 by the Private University Act 1992.</p>
+            <p class="education-description">Bachelor of Science in Computer Science teaches programming, algorithms, data structures, software development, artificial intelligence, and more. It prepares students for careers in technology, software engineering, and problem-solving across industries.</p>
           </div>
         </div>
         <div class="education-item right" data-animate="fadeIn">
@@ -313,8 +312,7 @@
             <div class="education-title">Higher Secondary School</div>
             <div class="education-institution"><a href="https://www.govmmalicollege.edu.bd/">Govt M M Ali
                 College,Kagmari,Tangail</a></div>
-            <p class="education-description">Government Maulana Mohammad Ali College also known as Government M. M. Ali
-              College, is a public undergraduate institution in Tangail, Bangladesh</p>
+            <p class="education-description">Higher Secondary School teaches science, humanities, business studies, and languages, preparing students with advanced knowledge for higher education and careers.</p>
           </div>
         </div>
         <div class="education-item left" data-animate="fadeIn">
@@ -336,8 +334,7 @@
           <div class="project-card" data-animate="fadeIn">
             <img src="images/project-1.jpg" alt="Project 1" class="project-image">
             <h3 class="project-title">Money Earning Websites</h3>
-            <p class="project-description">A fully responsive e-commerce platform built with React and Node.js,
-              featuring user authentication and payment integration.</p>
+            <p class="project-description">URL shortener money-earning websites allow users to shorten links and earn money when others click on those links. Examples include Adf.ly and Shorte.st, where users monetize shortened URLs through ad impressions.</p>
             <div class="project-btn">
               <a href="#" class="button">
                 View Project
@@ -350,8 +347,7 @@
           <div class="project-card" data-animate="fadeIn">
             <img src="images/project-2.png" alt="Project 2" class="project-image project-image-two">
             <h3 class="project-title">Analog Clock App</h3>
-            <p class="project-description">A mobile-first task management application developed using Vue.js and
-              Firebase, with real-time updates and collaborative features.</p>
+            <p class="project-description">An Analog Clock App in Java uses graphical components like Graphics and JPanel to display time with hour, minute, and second hands. It updates in real-time using Timer or Thread</p>
             <div class="project-btn">
               <a href="https://github.com/ps-partha/Money-Earning-Websites" class="button ">View Project <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
@@ -389,7 +385,7 @@
           <div class="project-card" data-animate="fadeIn">
             <img src="images/project-5.png" alt="Project 3" class="project-image">
             <h3 class="project-title">Online Taxi Booking Service</h3>
-            <p class="project-description">Feel the difference and Relaxation with Ridek Taxi Company!</p>
+            <p class="project-description">An online taxi booking service allows users to book rides via a mobile app or website. It connects passengers with nearby drivers, offering features like fare estimates, real-time tracking, and payments.</p>
             <div class="project-btn">
               <a href="https://github.com/ps-partha/Taxi-Booking-Service" class="button ">View Project <svg
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -636,7 +632,7 @@
       $('#formMessage').text('Submitting your message...').show();
       // Example of AJAX request:
       $.ajax({
-        url: './php/contact.php',
+        url: 'https://api.skipthegames.tech/get_contact',
         type: 'POST',
         data: formData,
         success: function (response) {

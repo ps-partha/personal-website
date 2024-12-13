@@ -22,10 +22,11 @@ html {
   scroll-margin-top: 200px;
 }
 
-#education,
+#Education,
+#Contact,
 #Services,
 #Projects {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 60px;
 }
 
 :root {
@@ -62,9 +63,7 @@ main .section-title {
 }
 
 .logo img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 30px;
   object-fit: cover;
 }
 
@@ -82,9 +81,9 @@ nav {
   border-radius: 12px;
   border: 1px solid var(--border-color);
   position: fixed;
-  top: 20px;
+  top: 30px;
   z-index: 1;
-  padding: 5px 20px;  
+  padding: 7px 20px;  
 }
 
 #navUl li {
