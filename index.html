@@ -636,6 +636,7 @@
         type: 'POST',
         data: formData,
         success: function (response) {
+          console.log(response);
           if (response.statue === 'success') {
             $('#formMessage').text('Thank you for your message, ' + formData.name + '!').css('color', 'green');
             $('#contactForm')[0].reset();
@@ -644,7 +645,7 @@
           }
         },
         error: function () {
-          $('#formMessage').text('Something went wrong. Please try again.').css('color', 'red');
+          $('#error').text('Something went wrong. Please try again.').css('color', 'red');
         }
       });
     });
