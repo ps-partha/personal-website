@@ -636,16 +636,11 @@
         type: 'POST',
         data: formData,
         success: function (response) {
-          console.log(response);
-          if (response.statue === 'success') {
-            $('#formMessage').text('Thank you for your message, ' + formData.name + '!').css('color', 'green');
-            $('#contactForm')[0].reset();
-          } else {
-            $('#formMessage').text(response.message).css('color', 'red');
-          }
+          $('#formMessage').text(response.message).css('color', 'green');
+          $('#contactForm')[0].reset();
         },
         error: function () {
-          $('#error').text('Something went wrong. Please try again.').css('color', 'red');
+          $('#formMessage').text('Something went wrong. Please try again.').css('color', 'red');
         }
       });
     });
